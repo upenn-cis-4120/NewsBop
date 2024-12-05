@@ -1,0 +1,89 @@
+.friends-container {
+    padding: 0 20px;
+}
+
+.friend-entry {
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    align-items: center;
+    margin-bottom: 30px;
+    gap: 15px;
+}
+
+.friend-entry .username {
+    color: #8B7EF8;
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 0;
+    text-align: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.bottom-tools {
+    position: absolute;
+    bottom: 80px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.bottom-tools i {
+    color: #8B7EF8;
+    font-size: 32px;
+    cursor: pointer;
+}
+
+.friend-dialog {
+    border: none;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #FFF5E0;
+    width: 80%;
+    max-width: 300px;
+}
+
+.friend-dialog h3 {
+    color: #8B7EF8;
+    margin-top: 0;
+}
+
+.friend-dialog form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.friend-dialog input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #8B7EF8;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.dialog-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.dialog-button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button-cancel {
+    background: #ccc;
+}
+
+.button-submit {
+    background: #8B7EF8;
+    color: white;
+}

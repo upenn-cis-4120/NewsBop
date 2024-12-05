@@ -1,0 +1,75 @@
+.leaderboard-container {
+    padding: 0 20px;
+}
+
+.leaderboard-entry {
+    display: grid;
+    grid-template-columns: 40px 60px 1fr;
+    align-items: center;
+    margin-bottom: 30px;
+    gap: 15px;
+}
+
+.trophy {
+    width: 40px;
+    text-align: center;
+}
+
+.trophy i {
+    font-size: 24px;
+}
+
+.trophy-gold {
+    color: #FFD700;
+}
+
+.trophy-silver {
+    color: #C0C0C0;
+}
+
+.trophy-bronze {
+    color: #CD7F32;
+}
+
+.trophy-regular {
+    color: #8B7EF8;
+}
+
+.leaderboard-entry .user-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.leaderboard-entry .username {
+    color: #8B7EF8;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+    text-align: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.streak {
+    color: #8B7EF8;
+    opacity: 0.8;
+    font-size: 18px;
+}
+
+.empty-state {
+    text-align: center;
+    color: #8B7EF8;
+    padding: 40px 20px;
+}
+
+.empty-state i {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.empty-state p {
+    font-size: 16px;
+    opacity: 0.8;
+}

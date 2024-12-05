@@ -1,0 +1,29 @@
+.user-avatar {
+    background-color: #E6E0FF;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #8B7EF8;
+    /* border-radius: 100%;  
+    box-shadow: 0 7px 10px rgba(0, 0, 0, 0.2);  */
+}
+
+.user-avatar.large {
+    width: 120px;
+    height: 120px;
+    font-size: 45px;
+}
+
+.avatar-image {
+    width: 135%;
+    height: 135%;
+    object-fit: cover; /* This ensures the image covers the space properly */
+    transform: translateX(-3px);
+}
+
+.user-avatar.small {
+    width: 60px;
+    height: 60px;
+    font-size: 30px;
+}
