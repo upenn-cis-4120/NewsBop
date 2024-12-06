@@ -11,6 +11,10 @@ export function AppProvider({ children }) {
     return JSON.parse(localStorage.getItem('categoryStreaks')) || {};
   });
 
+  const [favoriteCategories, setFavoriteCategories] = useState(() => {
+    return JSON.parse(localStorage.getItem('favoriteCategories')) || ['pop', 'politics', 'finance'];
+  });
+
   // Calculate user streak based on maximum category streak
   const userStreak = Math.max(0, ...Object.values(categoryStreaks));
 
@@ -18,6 +22,20 @@ export function AppProvider({ children }) {
   useEffect(() => {
     localStorage.setItem('friends', JSON.stringify(friends));
   }, [friends]);
+
+  useEffect(() => {
+    localStorage.setItem('favoriteCategories', JSON.stringify(favoriteCategories));
+  }, [favoriteCategories]);
+
+  const toggleFavoriteCategory = (categoryId) => {
+    setFavoriteCategories(prev => {
+      if (prev.includes(categoryId)) {
+        return prev.filter(id => id !== categoryId);
+      } else {
+        return [...prev, categoryId];
+      }
+    });
+  };
 
   useEffect(() => {
     localStorage.setItem('categoryStreaks', JSON.stringify(categoryStreaks));
@@ -48,7 +66,9 @@ export function AppProvider({ children }) {
     categoryStreaks,
     userStreak, // This is now the maximum of all category streaks
     addFriend,
-    updateCategoryStreak
+    updateCategoryStreak,
+    favoriteCategories,
+    toggleFavoriteCategory
   };
 
   return <AppContext.Provider value={value}>{children}</AppContext.Provider>;

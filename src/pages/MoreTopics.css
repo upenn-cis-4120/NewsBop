@@ -1,0 +1,48 @@
+.topics-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+.topic-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.topic-image-container {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.topic-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.topic-heart {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #999; /* Gray by default */
+    font-size: 24px;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.topic-heart.active {
+    color: #FF9999; /* Red when active */
+}
+
+.topic-name {
+    color: #8B7EF8;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+}

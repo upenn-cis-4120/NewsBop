@@ -6,13 +6,14 @@ import './Home.css';
 
 const Home = () => {
   const navigate = useNavigate();
-  const { categoryStreaks } = useApp();
+  const { categoryStreaks, favoriteCategories } = useApp();
 
   const categories = [
     { id: 'pop', name: 'POP' },
     { id: 'politics', name: 'POLITICS' },
-    { id: 'finance', name: 'FINANCE' }
-  ];
+    { id: 'finance', name: 'FINANCE' },
+    { id: 'art', name: 'ART' }
+  ].filter(category => favoriteCategories.includes(category.id));
 
   return (
     <PageLayout>

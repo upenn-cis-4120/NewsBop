@@ -10,6 +10,8 @@ import Leaderboard from './pages/Leaderboard';
 import FinanceQuiz from './pages/FinanceQuiz';
 import PopQuiz from './pages/PopQuiz';
 import PoliticsQuiz from './pages/PoliticsQuiz';
+import ArtQuiz from './pages/ArtQuiz';
+import MoreTopics from './pages/MoreTopics';
 import './index.css';
 
 function App() {
@@ -23,6 +25,8 @@ function App() {
           <Route path="/quiz/finance" element={<FinanceQuiz />} />
           <Route path="/quiz/pop" element={<PopQuiz />} />
           <Route path="/quiz/politics" element={<PoliticsQuiz />} />
+          <Route path="/quiz/art" element={<ArtQuiz />} />
+          <Route path="/more-topics" element={<MoreTopics />} />
         </Routes>
       </Router>
     </AppProvider>
